@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cómo cuidar un tatuaje nuevo · Notas de taller · Yotzin</title>
+<meta name="description" content="Guía práctica para cuidar un tatuaje nuevo: limpieza, hidratación, errores comunes y señales de alerta. Por Yotzin, tatuador en Guadalajara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#111111; --bg2:#191919; --ink:#EAE8E3; --mute:#92908D; --line:#333333;
+  --teal:#245563; --teal-lt:#4C8997;
+  --font:'Alegreya Sans',system-ui,sans-serif; --col:13rem; --gap:clamp(2rem,5vw,5rem);
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.1rem;line-height:1.6;overflow-wrap:break-word}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal-lt);outline-offset:4px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.label{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.n,.tag{color:var(--teal-lt)}
+.go{display:inline-block;color:var(--teal-lt);text-decoration:none;border-bottom:1px solid var(--teal);padding-bottom:2px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;transition:border-color .2s}
+.go:hover{border-color:var(--teal-lt)}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:3.75rem}
+.brand{font-weight:700;font-size:1.4rem;letter-spacing:.3em;text-decoration:none}
+nav{display:flex;gap:clamp(.9rem,2.5vw,2rem)}
+nav a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--mute);transition:color .2s}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+nav a[aria-current]{border-bottom:1px solid var(--teal-lt)}
+
+.back{display:inline-block;margin-top:2rem}
+.head{display:grid;gap:1.5rem;padding:clamp(1.5rem,5vw,3rem) 0 clamp(2rem,5vw,3.5rem)}
+.head .meta{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;align-items:baseline}
+.head .num{display:block;font-size:clamp(3rem,10vw,6rem);line-height:.8;margin-bottom:1rem}
+h1{font-weight:700;font-size:clamp(2.4rem,9.5vw,6.2rem);line-height:.98;letter-spacing:-.005em;margin:0 0 1.5rem}
+.intro{font-size:clamp(1.25rem,3vw,1.6rem);line-height:1.4;margin:0;max-width:40ch;border-top:1px solid var(--teal);padding-top:1rem}
+
+figure{margin:0}
+figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+figcaption{margin-top:.6rem}
+.cover{margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+
+.read{counter-reset:s;max-width:66ch}
+.read p{font-size:1.2rem;line-height:1.75;margin:0 0 1.5rem}
+.read h2{counter-increment:s;font-weight:700;font-size:clamp(1.7rem,4vw,2.1rem);line-height:1.15;margin:3.25rem 0 1.1rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.read h2::before{content:counter(s,decimal-leading-zero);display:block;color:var(--teal-lt);font-size:.78rem;font-weight:400;letter-spacing:.22em;margin-bottom:.6rem}
+.read h3{font-weight:700;font-size:1.3rem;line-height:1.25;margin:2rem 0 .6rem}
+.read ul{margin:0 0 1.5rem;padding-left:1.25rem}
+.read li{font-size:1.2rem;line-height:1.65;margin-bottom:.5rem;padding-left:.25rem}
+.read li::marker{color:var(--teal-lt)}
+.read blockquote{margin:2.5rem 0;padding-left:1.25rem;border-left:1px solid var(--teal);font-style:italic;font-size:clamp(1.5rem,3.6vw,2rem);line-height:1.3}
+.read figure{margin:2.5rem 0}
+.concl{margin-top:3rem;padding-top:1.25rem;border-top:1px solid var(--teal)}
+.concl .label{display:block;margin-bottom:.75rem}
+
+.after{margin-top:clamp(3rem,8vw,6rem);padding:2rem 0 clamp(3rem,8vw,5rem);border-top:1px solid var(--line)}
+.rel{list-style:none;margin:1rem 0 2.5rem;padding:0}
+.rel li{border-top:1px solid var(--line);padding:1.25rem 0}
+.rel li:last-child{border-bottom:1px solid var(--line)}
+.rel a{text-decoration:none;display:block}
+.rel b{display:block;font-weight:700;font-size:1.5rem;line-height:1.15;margin-top:.5rem;transition:color .2s}
+.rel a:hover b{color:var(--teal-lt)}
+.invite{margin:0 0 1.5rem;max-width:36ch;font-size:1.2rem}
+.links{display:flex;flex-wrap:wrap;gap:1rem 2rem}
+
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+@media (min-width:900px){
+  .head,.sheet{grid-template-columns:var(--col) minmax(0,1fr);column-gap:var(--gap)}
+  .sheet{display:grid}
+  .sheet>*{grid-column:2}
+  .sheet>.side{grid-column:1;grid-row:1}
+  .head .meta{flex-direction:column;align-items:flex-start;gap:.5rem}
+  figure img{aspect-ratio:16/8}
+  .read figure img{aspect-ratio:3/2}
+}
+@media (max-width:520px){nav a:nth-child(2),nav a:nth-child(3){display:none}nav{gap:1rem}nav a{letter-spacing:.12em;font-size:.74rem}.brand{letter-spacing:.2em;font-size:1.25rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<!-- PARA UN ARTÍCULO NUEVO: duplica este archivo, cambia title y description de arriba, el texto dentro de <main> y la ruta de la foto.
+     La foto es opcional: si el archivo no existe, no aparece. Si no usarás foto, borra el bloque de la figura de portada.
+     Cuando haya más artículos, agrega antes de .invite una lista de enlaces con la clase "rel" (un li por artículo). -->
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Yotzin, inicio">YOTZIN</a>
+    <nav aria-label="Principal">
+      <a href="../index.html#works">Trabajos</a><a href="../index.html#about">Sobre mí</a><a href="../index.html#process">Proceso</a><a href="../index.html#contact">Contacto</a><a href="index.html" aria-current="page">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back go" href="index.html">← Notas de taller</a>
+
+  <div class="head">
+    <div class="meta label"><span class="num n">01</span><span class="tag">Cuidados</span><span>Noviembre 2026</span></div>
+    <div>
+      <h1>Cómo cuidar un tatuaje nuevo: guía para una buena cicatrización</h1>
+      <p class="intro">Una vez que terminamos y te mando para tu casa, empieza otra parte importante del proceso: cuidar ese tatuaje que acabamos de hacer.</p>
+    </div>
+  </div>
+
+  <figure class="cover"><img src="../img/blog-cuidados.jpg" alt="Antebrazo tatuado con dos dedos presionando suavemente la piel" style="object-position:50% 45%" onerror="this.parentElement.remove()"></figure>
+
+  <div class="sheet">
+    <article class="read">
+      <p>Y aunque parezca algo bastante obvio, he visto que muchas personas terminan complicándose más de la cuenta con los cuidados. Compran un montón de cremas, utilizan productos que ni siquiera necesitan o están revisando y manipulando el tatuaje a cada rato.</p>
+
+      <blockquote>La verdad es que no tiene tanta ciencia.</blockquote>
+
+      <p>Un tatuaje es una herida superficial y, como cualquier herida, necesita limpieza, atención y tiempo para recuperarse. No necesitas convertir tu casa en una clínica ni comprar medio catálogo de productos para que cicatrice bien.</p>
+      <p>Personalmente, prefiero mantener los cuidados lo más sencillos posible: limpiar, evitar lastimar la zona y dejar que el cuerpo haga su trabajo.</p>
+      <p>Te voy a contar cómo recomiendo cuidar un tatuaje nuevo, qué cosas debes evitar y algunos errores que he visto cometer a lo largo de mi experiencia tatuando.</p>
+
+      <h2>Las primeras horas después de tatuarte</h2>
+      <p>Al terminar un tatuaje, la piel queda sensible y puede presentar algo de inflamación, enrojecimiento y secreción. Es parte de la respuesta natural de la piel al procedimiento.</p>
+      <p>En mi caso, suelo utilizar plástico convencional para proteger el tatuaje cuando sales del estudio. Mi recomendación es retirarlo después de un máximo de tres horas, siguiendo las indicaciones que te doy al terminar.</p>
+      <p>Hay ocasiones en las que el tatuaje prácticamente no presenta secreción y prefiero no cubrirlo. Mi intención es evitar mantener la zona húmeda más tiempo del necesario.</p>
+      <p>Eso sí, existen diferentes métodos de protección y vendajes para tatuajes. Si utilizamos alguno diferente, el tiempo de uso y la forma de retirarlo pueden cambiar. No todos los vendajes funcionan igual.</p>
+      <p>Cuando llegues a casa y sea momento de retirar el plástico, primero lávate bien las manos. Después lava el tatuaje con abundante agua y jabón neutro, utilizando las manos limpias y sin tallar ni rascar.</p>
+      <p>La idea es retirar los restos de tinta, vaselina, secreciones o cualquier producto que haya quedado sobre la piel.</p>
+      <p>Una vez limpio, sécalo con una toalla limpia o papel de cocina nuevo. Hazlo dando pequeños toques, sin arrastrar ni frotar.</p>
+      <p>Durante las primeras horas prefiero no recomendar la aplicación de cremas si no son necesarias. Deja que la piel se recupere y procura protegerla de golpes, raspones, roces y contaminación.</p>
+
+      <h2>Cómo cuidar tu tatuaje durante los primeros tres días</h2>
+      <p>Durante estos primeros días quiero que prestes atención a algo muy sencillo: mantener limpio el tatuaje sin estar interviniendo constantemente.</p>
+      <p>Mi recomendación es lavarlo una vez al día y hacer una segunda limpieza únicamente si lo consideras necesario. Por ejemplo, si estuviste expuesto a mucho polvo, sudor o alguna situación en la que pudo contaminarse.</p>
+      <p>Utiliza agua, jabón suave y limpia con pequeños círculos sin aplicar mucha fuerza. No necesitas esponjas, cepillos ni estar tallando la piel como si quisieras quitar una mancha difícil.</p>
+      <p>En cuanto a la hidratación, prefiero que no satures el tatuaje de crema. Si notas resequedad, puedes aplicar una capa muy delgada de una crema hidratante sencilla, sin fragancias y adecuada para piel sensible.</p>
+      <p>También presta atención a la ropa que utilizas. Evita prendas demasiado ajustadas o materiales que puedan pegarse, raspar o generar fricción constante sobre el tatuaje.</p>
+      <p>Durante estos primeros días procura evitar:</p>
+      <ul>
+        <li>Exponer el tatuaje directamente al sol.</li>
+        <li>Entrenar o realizar actividades que puedan provocar golpes, fricción o contaminación de la zona.</li>
+        <li>Nadar o sumergir el tatuaje en albercas, jacuzzis, lagos o el mar.</li>
+        <li>Utilizar ropa que esté rozando constantemente la zona.</li>
+        <li>Rascar, tallar o manipular la piel.</li>
+      </ul>
+      <p>No te estoy diciendo que te encierres en tu casa durante tres días, pero tampoco es momento de irte a hacer una sesión de pierna en el gimnasio y apoyar tu tatuaje recién hecho en todas las máquinas.</p>
+      <p>Un poco de sentido común también ayuda bastante.</p>
+
+      <h2>Del cuarto al día quince: deja que tu piel haga su trabajo</h2>
+      <p>Después de los primeros días, el tatuaje comienza a atravesar otra etapa de recuperación.</p>
+      <p>Es posible que notes resequedad, pequeñas costras, descamación o comezón. No te asustes, son cosas que pueden formar parte del proceso normal de cicatrización.</p>
+      <p>Aquí hay algo que quiero dejar muy claro: no retires las costras ni arranques la piel que comienza a desprenderse.</p>
+      <p>Aunque parezca que hay tinta que se está saliendo, no intentes quitarla. Deja que la piel se desprenda por sí sola.</p>
+      <p>Si notas resequedad, puedes utilizar una crema hidratante sencilla una o dos veces al día, aplicando una cantidad pequeña. No necesitas mantener el tatuaje cubierto de crema todo el tiempo.</p>
+      <p>Continúa evitando el sol directo y no nades ni sumerjas la zona hasta que la piel haya terminado de cicatrizar.</p>
+      <p>Los quince días son una referencia, no una fecha límite. Dependiendo del tamaño, la zona del cuerpo y cada persona, la recuperación puede tomar más tiempo.</p>
+      <p>Así que no te desesperes. Que ya no tengas molestias no significa necesariamente que la piel haya terminado de recuperarse.</p>
+
+      <h2>Errores que he visto cometer al cuidar un tatuaje</h2>
+      <p>Hay algunos hábitos que he visto repetirse entre personas que acaban de tatuarse. Y lo curioso es que muchos se hacen con la intención de cuidar mejor el tatuaje, pero terminan complicando innecesariamente el proceso.</p>
+
+      <h3>Utilizar demasiada crema</h3>
+      <p>Este es uno de los más comunes. Existe la idea de que mientras más crema utilices, mejor va a cicatrizar el tatuaje.</p>
+      <p>No es así. No necesitas bañar tu tatuaje en crema cada pocas horas. Si notas resequedad, utiliza una capa delgada de un producto adecuado y listo.</p>
+
+      <h3>Utilizar cremas cicatrizantes sin necesitarlas</h3>
+      <p>Personalmente, no soy partidario de utilizar pomadas cicatrizantes o productos medicinales por cuenta propia.</p>
+      <p>He tenido experiencias con productos como Bepanthen que no me han sentado bien en la piel. Eso no significa que todas las personas vayan a tener la misma reacción, pero tampoco veo necesario experimentar con productos que no necesitas.</p>
+      <p>Prefiero recomendar una rutina sencilla y productos hidratantes adecuados para piel sensible.</p>
+
+      <h3>Hacer ejercicio al día siguiente</h3>
+      <p>He tenido clientes que al día siguiente de tatuarse ya están entrenando como si nada hubiera pasado.</p>
+      <p>No es que necesariamente vaya a ocurrir algo malo, pero estás exponiendo una herida reciente al sudor, la fricción, las superficies de entrenamiento y el contacto con equipos compartidos.</p>
+      <p>Personalmente, prefiero que te tomes unos días de descanso antes de regresar a tus actividades habituales, especialmente si implican contacto o presión sobre el tatuaje.</p>
+
+      <h3>Arrancar las costras</h3>
+      <p>Por favor, no hagas esto.</p>
+      <p>No importa si una costra parece estar a punto de desprenderse o si notas que hay tinta en ella. No la arranques. Deja que se desprenda naturalmente.</p>
+      <p>Manipularlas puede irritar la piel, retrasar la recuperación e incluso afectar el resultado del tatuaje.</p>
+
+      <h3>Exponer el tatuaje al sol</h3>
+      <p>Durante la cicatrización debes evitar la exposición directa al sol. Una vez que esté completamente recuperado, utiliza protector solar de amplio espectro SPF 30 o superior para ayudar a conservar tu tatuaje.</p>
+
+      <h2>¿Cuándo debes preocuparte por tu tatuaje?</h2>
+      <p>Es normal experimentar cierta sensibilidad, enrojecimiento, inflamación y comezón durante la recuperación.</p>
+      <p>Sin embargo, hay síntomas que no debes confundir con una cicatrización normal.</p>
+      <p>Presta atención si notas:</p>
+      <ul>
+        <li>Enrojecimiento que aumenta o comienza a extenderse.</li>
+        <li>Dolor que empeora en lugar de disminuir.</li>
+        <li>Inflamación excesiva o sensación de calor cada vez mayor.</li>
+        <li>Secreción espesa, amarillenta o verdosa.</li>
+        <li>Fiebre o escalofríos.</li>
+      </ul>
+      <p>Si presentas alguno de estos síntomas, busca atención médica. No intentes solucionar una posible infección aplicando más crema o cambiando por tu cuenta la rutina de cuidados.</p>
+      <p>Yo puedo orientarte sobre el aspecto de tu tatuaje, pero si existe la posibilidad de una infección o una reacción importante en la piel, lo correcto es que te valore un profesional de la salud.</p>
+
+      <h2>Algo que siempre quiero que entiendas sobre la cicatrización</h2>
+      <p>Al final, un tatuaje es una herida más. Es superficial, pero sigue siendo una herida.</p>
+      <p>Piensa en cuando te haces un pequeño raspón. No necesitas llenarlo de productos ni estar quitando constantemente las costras. Simplemente mantienes limpia la zona, evitas lastimarla y dejas que tu cuerpo haga su trabajo.</p>
+      <p>También quiero recordarte algo que a veces dejamos de lado: la hidratación empieza desde adentro. Mantenerte bien hidratado, alimentarte adecuadamente y descansar son hábitos que ayudan a tu salud y a la recuperación de tu cuerpo. Las cremas tienen su función sobre la piel, pero no sustituyen esos hábitos.</p>
+      <p>Mi recomendación es que no compliques algo que puede ser bastante sencillo. Sigue las indicaciones que te doy al terminar tu sesión, mantén una buena higiene y ten paciencia.</p>
+
+      <blockquote>Yo me encargo de hacer el tatuaje; tú te encargas de cuidarlo.</blockquote>
+
+      <p>Y créeme, los dos tenemos trabajo que hacer para que el resultado sea el que buscamos.</p>
+    </article>
+  </div>
+
+  <div class="after sheet">
+    <div>
+      <p class="invite">Si quieres ver cómo se traducen estas ideas en piel, el portafolio está a un paso.</p>
+      <div class="links"><a class="go" href="../index.html#works">Conocer el portafolio</a><a class="go" href="index.html">Volver al blog</a></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap label"><span>© <span id="yr"></span> Yotzin</span><span>Guadalajara, México</span></div></footer>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>

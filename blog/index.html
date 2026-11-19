@@ -1,1 +1,133 @@
-x
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Notas de taller · Blog · Yotzin</title>
+<meta name="description" content="Ideas, procesos y observaciones sobre el tatuaje, el oficio y la imagen. Por Yotzin, tatuador en Guadalajara.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#111111; --bg2:#191919; --ink:#EAE8E3; --mute:#92908D; --line:#333333;
+  --teal:#245563; --teal-lt:#4C8997;
+  --font:'Alegreya Sans',system-ui,sans-serif;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(4.5rem + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.1rem;line-height:1.6;overflow-wrap:break-word}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal-lt);outline-offset:4px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+.label{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.n,.tag{color:var(--teal-lt)}
+.go{display:inline-block;color:var(--teal-lt);text-decoration:none;border-bottom:1px solid var(--teal);padding-bottom:2px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;transition:border-color .2s}
+.go:hover{border-color:var(--teal-lt)}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:3.75rem}
+.brand{font-weight:700;font-size:1.4rem;letter-spacing:.3em;text-decoration:none}
+nav{display:flex;gap:clamp(.9rem,2.5vw,2rem)}
+nav a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--mute);transition:color .2s}
+nav a:hover,nav a[aria-current]{color:var(--ink)}
+nav a[aria-current]{border-bottom:1px solid var(--teal-lt)}
+
+.hero{display:flex;flex-direction:column;padding:clamp(2.5rem,8vw,6rem) 0 clamp(2.5rem,6vw,4rem)}
+.hero h1{font-weight:700;text-transform:uppercase;font-size:clamp(3rem,15.5vw,11.5rem);line-height:.86;letter-spacing:-.01em;margin:1.25rem 0 2.25rem}
+.hero h1 span{display:block}
+.hero h1 span+span{padding-left:.9em}
+.hero h1 i{font-style:normal;color:var(--teal-lt)}
+.desc{max-width:30ch;margin:0;font-size:1.25rem;line-height:1.4;border-top:1px solid var(--teal);padding-top:1rem}
+
+.feat{border-top:1px solid var(--line);padding:clamp(2rem,6vw,4rem) 0;display:grid;gap:2rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:baseline}
+.feat .big{font-size:clamp(3rem,10vw,6rem);line-height:.8;font-weight:400;display:block;margin-bottom:1.25rem}
+.feat h2{font-weight:700;font-size:clamp(2.2rem,8.5vw,4.4rem);line-height:1;margin:1.1rem 0 1.25rem;letter-spacing:-.005em}
+.feat p{font-size:1.25rem;line-height:1.45;max-width:44ch;margin:0 0 1.75rem}
+.feat figure{margin:0}
+.feat img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+
+.arch-head{display:flex;justify-content:space-between;padding:1.25rem 0;border-top:1px solid var(--teal)}
+.grid{display:grid;grid-template-columns:1fr;gap:0 clamp(2rem,5vw,4rem);margin-bottom:clamp(3rem,8vw,6rem)}
+.item{border-top:1px solid var(--line);padding:1.75rem 0 2.25rem}
+.item h3{font-weight:700;font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.08;margin:.9rem 0 .8rem}
+.item h3 a{text-decoration:none}
+.item h3 a:hover{color:var(--teal-lt)}
+.item p{color:var(--mute);font-size:1.05rem;max-width:46ch;margin:0 0 1.25rem}
+.item img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:1.25rem}
+
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){
+  .hero .desc{margin-left:auto}
+  .feat.has-img{grid-template-columns:7fr 5fr;gap:clamp(2rem,5vw,5rem);align-items:end}
+}
+@media (max-width:520px){nav a:nth-child(2),nav a:nth-child(3){display:none}nav{gap:1rem}nav a{letter-spacing:.12em;font-size:.74rem}.brand{letter-spacing:.2em;font-size:1.25rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="../index.html" aria-label="Yotzin, inicio">YOTZIN</a>
+    <nav aria-label="Principal">
+      <a href="../index.html#works">Trabajos</a><a href="../index.html#about">Sobre mí</a><a href="../index.html#process">Proceso</a><a href="../index.html#contact">Contacto</a><a href="index.html" aria-current="page">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="label">Publicación / Notas del estudio</p>
+    <h1><span>Notas de</span><span>taller<i>.</i></span></h1>
+    <p class="desc">Ideas, procesos y observaciones sobre el tatuaje, el oficio y la imagen.</p>
+  </div>
+
+  <section class="feat" id="destacado" aria-label="Artículo destacado"></section>
+
+  <section id="archivo" aria-label="Archivo de artículos">
+    <div class="arch-head label"><span>Archivo</span><span id="count"></span></div>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<footer><div class="wrap label"><span>© <span id="yr"></span> Yotzin</span><span>Guadalajara, México</span></div></footer>
+
+<script>
+/* Para publicar: agrega un objeto al inicio de la lista (el primero es el destacado).
+   img es opcional: déjalo vacío ("") si el artículo no lleva foto.
+   Las fotos van en la carpeta img/ de la raíz, por eso la ruta empieza con ../img/ */
+const ARTICULOS = [
+  {n:"01", cat:"Cuidados", fecha:"Noviembre 2026", url:"cuidados-tatuaje-nuevo.html",
+   img:"../img/blog-cuidados.jpg", alt:"Antebrazo tatuado con dos dedos presionando suavemente la piel",
+   titulo:"Cómo cuidar un tatuaje nuevo: guía para una buena cicatrización",
+   resumen:"Limpiar, evitar lastimar la zona y dejar que el cuerpo haga su trabajo. Cómo recomiendo cuidar un tatuaje nuevo, qué evitar y los errores que más he visto."}
+];
+
+const meta = a => `<div class="meta label"><span class="n">${a.n}</span><span class="tag">${a.cat}</span><span>${a.fecha}</span></div>`;
+const foto = (a, cls) => a.img ? `<img src="${a.img}" alt="${a.alt || ""}" loading="lazy" onerror="this.parentElement.remove();document.getElementById('destacado').classList.remove('has-img')">` : "";
+
+const f = ARTICULOS[0], feat = document.getElementById("destacado");
+feat.classList.toggle("has-img", !!f.img);
+feat.innerHTML = `<div><span class="n big">${f.n}</span>${meta({n:"Destacado",cat:f.cat,fecha:f.fecha})}
+  <h2>${f.titulo}</h2><p>${f.resumen}</p><a class="go" href="${f.url}">Leer artículo</a></div>` +
+  (f.img ? `<figure>${foto(f)}</figure>` : "");
+
+const rest = ARTICULOS.slice(1);
+document.getElementById("count").textContent = rest.length + " entradas";
+document.getElementById("archivo").hidden = !rest.length;
+document.getElementById("grid").innerHTML = rest.map(a => `<article class="item">${meta(a)}
+  <h3><a href="${a.url}">${a.titulo}</a></h3>${a.img ? `<img src="${a.img}" alt="${a.alt || ""}" loading="lazy" onerror="this.remove()">` : ""}
+  <p>${a.resumen}</p><a class="go" href="${a.url}">Leer</a></article>`).join("");
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
